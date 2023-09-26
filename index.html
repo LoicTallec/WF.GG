@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhoFeed">
+    <link rel="icon" href="images/gg.png">
+    <link rel="stylesheet" type="text/css" href="fonts/aero_03.ttf">
+    <link rel="stylesheet" href="style/css/style.css">
+    <script src="script/script.js"></script>
+    <title>WhoFeed.gg</title>
+</head>
+
+    <body>
+
+        <main>
+
+                <header>
+                    <a href="#"><img src="images/wf.png" alt="Logo WhoFeed"></a>
+                    <h1>WhoFeed.gg</h1>
+
+                    <ul>
+                        <li>
+                            <select id="langue" onchange="changeLanguage()">
+                                <option value="fr">Français</option>
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a href="#">Connexion</a>
+                        </li>
+                    </ul>
+
+                </header>
+
+
+                
+                    <section class="bouton">
+                        <p id="whoSearch">Quel joueur recherchez vous ?</p>
+                        <div class="btn">
+                            <select class="bas" id="geographie">
+                                <option value="EUW">EUW</option>
+                                <option value="EUNE">EUN/E</option>
+                                <option value="NA">NA</option>
+                            <input type="text" id="pseudo" placeholder="Pseudo">
+                            <!-- Ajoutez d'autres options géographiques selon vos besoins -->
+                            </select>
+                            <button onclick="searchProfile()">.GG</button>
+                        </div>
+                    </section>
+                </section>
+
+                <footer>
+                    <p>Copyright © 2023 WhoFeed.gg</p>
+                </footer>
+        </main>
+
+    </body>
+</html>
