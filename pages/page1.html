@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhoFeed">
+
+    <link rel="icon" href="images/gg.png">
+
+    <link rel="stylesheet" href="../style/css/style.css">
+
+    <script src="../script/script.js"></script> 
+
+    <title>WhoFeed.gg</title>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html"><img src="../images/wf.png" alt="Logo WhoFeed"></a>
+        <h1>WHOFEED.GG</h1>
+
+        <ul>
+            <li>
+                <select id="langue" onchange="changeLanguage()">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </li>
+        </ul>
+
+    </header>
+
+    <div class="content pagesearch">
+
+        <section class="bouton">
+            <p id="whoSearch">Profil non trouver</p>
+            <div class="btn">
+                <select class="bas" id="geographie">
+                    <option value="EUW">EUW</option>
+                    <option value="EUNE">EUN/E</option>
+                    <option value="NA">NA</option>
+                <input type="text" id="pseudo" placeholder="Pseudo">
+                <!-- Ajoutez d'autres options géographiques selon vos besoins -->
+                </select>
+                <button>.GG</button>
+            </div>
+                <div class="try">
+                    <p>Réessayez <br> ou</p>
+                    <div class="creatprofil" onclick="creatProfil()">Créer le profil</div>   
+                </div>
+        </section>
+
+    </div>
+
+        <footer>Copyright © WhoFeed.GG</footer>
+
+    </body>
+</html>
