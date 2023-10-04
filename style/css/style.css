@@ -188,7 +188,6 @@ footer {
   }
 }
 
-/**************** PAGE 2 ******************/
 .try {
   text-align: center;
   margin: 50px 0;
@@ -219,6 +218,48 @@ footer {
 
 .pagesearch {
   display: flex;
+}
+
+.initprofilsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.initprofilsection .initprofil {
+  background-color: #494949;
+  border: 2px solid #fff;
+  padding: 50px;
+  border-radius: 30px;
+}
+.initprofilsection .initprofil form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+.initprofilsection .initprofil .placeprofil {
+  text-align: center;
+  padding: 5px;
+}
+.initprofilsection .initprofil label {
+  margin: 20px 0;
+}
+.initprofilsection .initprofil select {
+  text-align: center;
+  padding: 5px 50px;
+}
+.initprofilsection .initprofil .gorb {
+  display: flex;
+}
+.initprofilsection .submitprofil {
+  margin-top: 50px;
+  width: 200px;
+  padding: 15px;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #F6861F, #ED1F24);
+  border-radius: 30px;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

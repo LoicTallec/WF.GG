@@ -31,9 +31,26 @@
 
     </header>
 
-    <div class="content">
+    <div class="content initprofilsection">
 
+        <div class="initprofil">
+            <form method="post">
+                <label for="pseudo">Pseudo in game :</label>
+                <input class="placeprofil" type="text" id="pseudo" placeholder="Pseudo" name="pseudo" required>
 
+                <label for="dernier-poste">Dernier poste connu :</label>
+                <select id="dernier-poste" name="dernier-poste">
+                <option value="Top">Top</option>
+                <option value="Forest">Forest</option>
+                <option value="Mid">Mid</option>
+                <option value="Bot">Bot</option>
+                <option value="Soutien">Soutien</option>
+                </select>
+                <br>
+
+                <input class="submitprofil" type="submit" value="Créer le profil">
+            </form>
+        </div>
 
     </div>
 
