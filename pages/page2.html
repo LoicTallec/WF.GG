@@ -1,3 +1,5 @@
+<!------------------ FICHE CREATION PROFIL ------------------>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,17 +29,22 @@
                     <option value="es">Spanish</option>
                 </select>
             </li>
+            <li>
+                <a href="#">Connexion</a>
+            </li>
         </ul>
 
-    </header>
+    </header> 
 
     <div class="content initprofilsection">
 
         <div class="initprofil">
-            <form method="post" action="../traitement.php">
+            <form  action="page3.html" method="post">
                 <label for="pseudo">Pseudo in game :</label>
                 <input class="placeprofil" type="text" id="pseudo" placeholder="Pseudo" name="pseudo" required>
         
+                <label for="lienexterne">lien externe profil (optionnel)</label>
+                <input class="placeprofil" type="text" id="lien" placeholder="OP.GG/U.GG..." name="lien">
                 <label for="position">Dernier poste connu :</label>
                 <select id="position" name="position">
                     <option value="Top">Top</option>
@@ -56,6 +63,7 @@
                     <!-- Ajoutez d'autres options géographiques selon vos besoins -->
                 </select>
                 <br>
+                
                 
                 <input class="submitprofil" type="submit" value="Créer le profil">
             </form>

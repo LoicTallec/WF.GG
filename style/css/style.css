@@ -64,19 +64,31 @@ header ul {
   width: 100%;
   margin: 20px 0;
 }
+header li {
+  display: flex;
+  align-items: center;
+}
+header li a {
+  font-size: 18px;
+}
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
   }
   header h1 {
     display: flex;
-    text-align: center;
-    font-size: 4em;
+    justify-content: center;
+    font-size: 3em;
+    width: 100%;
   }
   header ul {
-    width: 120px;
+    width: 0;
+    padding-right: 130px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header h1 {
+    font-size: 4em;
   }
 }
 
@@ -235,7 +247,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: 385px;
 }
 .initprofilsection .initprofil .placeprofil {
   text-align: center;
@@ -248,9 +260,6 @@ footer {
   text-align: center;
   padding: 5px 50px;
 }
-.initprofilsection .initprofil .gorb {
-  display: flex;
-}
 .initprofilsection .submitprofil {
   margin-top: 55px;
   width: 200px;
@@ -258,6 +267,114 @@ footer {
   font-size: 18px;
   color: #FFFFFF;
   background: linear-gradient(to right, #F6861F, #ED1F24);
+  border-radius: 30px;
+  border: none;
+}
+
+.brutprofil {
+  padding: 20px;
+}
+
+.ficheprofil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .ficheprofil {
+    flex-direction: row;
+  }
+}
+
+.ficheprofilgauche, .ficheprofilgauchebas {
+  justify-content: center;
+  border: #fff solid 2px;
+  background-color: #494949;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  margin: 30px auto;
+}
+.ficheprofilgauche h3, .ficheprofilgauchebas h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.ficheprofilgauche ul, .ficheprofilgauchebas ul {
+  text-align: center;
+  margin: 30px 0;
+}
+.ficheprofilgauche ul li, .ficheprofilgauchebas ul li {
+  margin: 10px 0;
+}
+
+.ficheprofildroite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #fff solid 2px;
+  background-color: #494949;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  margin: 30px auto;
+  max-width: fit-content;
+}
+.ficheprofildroite h3 {
+  font-size: 30px;
+}
+.ficheprofildroite p {
+  font-size: 20px;
+}
+
+.badgetable tr {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.badgetable tr select {
+  border: none;
+}
+.badgetable tr h4 {
+  margin: 15px 0;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .badgetable tr {
+    flex-direction: row;
+  }
+}
+
+[id=colonne1] option {
+  background-color: rgb(53, 112, 53);
+  color: #FFFFFF;
+  padding: 7px 0;
+  width: 250px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #1E1E1E;
+}
+
+[id=colonne2] option {
+  background-color: rgb(191, 56, 56);
+  color: #FFFFFF;
+  padding: 7px 0;
+  width: 250px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #1E1E1E;
+}
+
+[id=valider] {
+  background: linear-gradient(to right, #F6861F, #ED1F24);
+  color: #FFFFFF;
+  padding: 15px 0;
+  width: 250px;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: center;
   border-radius: 30px;
   border: none;
 }

@@ -20,5 +20,6 @@ var_dump($position);
 var_dump($region);
 
 console_log($position);
-
+header("Location: page3.html");
+exit();
 ?>

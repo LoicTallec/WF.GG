@@ -58,6 +58,7 @@ header {
     h1 {
         font-size: 30px;
         margin: 10px 0px;
+        
         display: none;
     }
 
@@ -68,20 +69,38 @@ header {
         margin: 20px 0;
     }
 
+    li {
+        display: flex;
+        align-items: center;
+        
+
+        a {
+            font-size: 18px;
+        }
+    }
+
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        
+        
         
         h1 {
             display: flex;
-            text-align: center;
-            font-size: 4em;
+            justify-content: center;
+            font-size: 3em;
+            width: 100%;
         }
 
         ul { 
-           width: 120px;
+           width: 0;
+            padding-right: 130px;
         }  
+    }
+
+    @media screen and (min-width: 1200px) {
+        h1 {
+            font-size: 4em;
+        }
     }
 }
 
@@ -91,3 +110,5 @@ header {
     font-size: 20px;
     text-align: center;
   }
+
+  

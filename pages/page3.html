@@ -1,0 +1,127 @@
+<!--------------------PROFIL TYPE--------------------------->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhoFeed">
+
+    <link rel="icon" href="images/gg.png">
+    <link rel="stylesheet" href="../style/css/style.css">
+
+    
+
+    <title>WhoFeed.gg</title>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html"><img src="../images/wf.png" alt="Logo WhoFeed"></a>
+        <h1>WHOFEED.GG</h1>
+
+        <ul>
+            <li>
+                <select id="langue" onchange="changeLanguage()">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </li>
+            <li>
+                <a href="#">Connexion</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <div class="content pagesearch brutprofil">
+
+        <figure class="ficheprofil">
+            <figure class="ficheprofilgauche">
+                <h3>Profil</h3>
+                <ul>
+                    <li>KARMA+ KARMA-</li>
+                    <li>$Pseudo</li>
+                    <li>$Lien externe</li>
+                    <li>$Région</li>
+                    <li>$Dernier poste connu</li>
+                </ul>
+            </figure>
+
+            <figure class="ficheprofilgauchebas">
+                <ul>
+                    <li>(Notation auto)</li>
+                    <li>(Notation auto)</li>
+                    <li>(Notation auto)</li>
+                    <li>(Notation auto)</li>
+                    <li>(Notation auto)</li>
+                    <li>(Notation auto)</li>
+
+                </ul>
+            </figure>
+
+            <figure class="ficheprofildroite" >
+                <!-- Badges -->
+                <h3>Badges</h3>
+                <p>Selectionnez un ou plusieurs badges puis valider</p>
+                <div class="badgetable">
+                    <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h4>Positif</h4>
+                            <select id="colonne1" size="15" multiple>
+                                <option value="option1">TEAM PLAYER</option>
+                                <option value="option2">BON SIGNAUX SONORES</option>
+                                <option value="option3">SAIS JOUER LE POSTE</option>
+                                <option value="option4">BON COÉQUIPIER</option>
+                                <option value="option5">POSTE GAP</option>
+                                <option value="option6">CHATTEUR AGRÉABLE</option>
+                                <option value="option7">LAISSE LES RESSOURCES</option>
+                                <option value="option8">RESPECT LE FORESTIER</option>
+                                <option value="option9">BON MENTAL</option>
+                                <option value="option10">N'ABANDONNE JAMAIS !</option>
+                                <option value="option11">BONNE ATTITUDE</option>
+                                <option value="option12">FAIT RAGEQUIT</option>
+                                <option value="option13">SAIS FARM</option>
+                                <option value="option14">GOOD OBJECTIVES</option>
+                                <option value="option15">FAISEUR DE VICTOIRE</option>
+
+                            </select>
+                            </td>
+                            
+                            <td>
+                                <h4>Négatif</h4>
+                            <select id="colonne2" size="15" multiple>
+                                <option value="option16">EGO PLAYER</option>
+                                <option value="option17">ABUS SIGNAUX SONORES</option>
+                                <option value="option18">SAIS PAS JOUER LE POSTE</option>
+                                <option value="option19">MAUVAIS COÉQUIPIER</option>
+                                <option value="option20">POSTE GAP</option>
+                                <option value="option21">CHATTEUR TOXIC</option>
+                                <option value="option22">VOL LES RESSOURCES</option>
+                                <option value="option23">DISRESPECT LE FORESTIER</option>
+                                <option value="option24">PAS DE MENTAL</option>
+                                <option value="option25">FF PLAYER</option>
+                                <option value="option26">TOXIC PLAYER</option>
+                                <option value="option27">RAGEQUIT</option>
+                                <option value="option28">SAIS PAS FARM</option>
+                                <option value="option29">AUCUNS OBJECTIFS</option>
+                                <option method="post" value="option30">RUINEUR DE PARTIES</option>
+-->                           </select>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="resultat"></div>
+                <!-- Badges END -->
+            </figure>
+
+    </div>
+
+        <footer>Copyright © WhoFeed.GG</footer>
+        <script src="../script/script.js"></script> 
+    </body>
+</html>
