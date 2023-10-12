@@ -249,6 +249,11 @@
             margin: 10px 0;
         }
     }
+    @media screen and (min-width: 1200px) {
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .ficheprofildroite {
@@ -272,62 +277,55 @@
         font-size: 20px;
         
     }
-}
 
-.badgetable {
-
-    tr {
+    .badgelist {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-
-        select {
-            border: none;
+        margin: 20px 0;
+        user-select: none;  
+    }
+    
+    [id='listOne'], [id='listTwo'] {
+        display: flex;
+        flex-direction: column;
+        margin: 0 30px;
+        cursor: pointer;
+    
+        span {
+            position: absolute; 
+            right: 20px;
+            top: 50%; 
+            transform: translateY(-50%); 
         }
-        
-
-        h4 {
-            margin: 15px 0;
-            font-size: 24px;
-        }
-
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
+    
+        @media screen and (min-width: 1200px) {
             
+            flex-direction: row;
+        }
+    }
+    
+    [id='listOne'] {
+        li {
+            background-color: rgb(186, 45, 45);
+            padding: 15px 50px;
+            margin: 5px 0;
+            border-radius: 30px;
+            position: relative;
+        }
+    }
+    
+    [id='listTwo'] {
+        li {
+            background-color: rgb(48, 157, 29);
+            padding: 15px 50px;
+            margin: 5px 0;
+            border-radius: 30px;
+            position: relative;
         }
     }
 }
 
 
-[id='colonne1'] option {
-    background-color: rgb(53, 112, 53);
-    color: $text-color;
-    padding: 7px 0;
-    width: 250px;
-    font-size: 18px;
-    text-align: center;
-    border: 1px solid $descipt-color;
-}
 
-[id='colonne2'] option {
-    background-color: rgb(191, 56, 56);
-    color: $text-color;
-    padding: 7px 0;
-    width: 250px;
-    font-size: 18px;
-    text-align: center;
-    border: 1px solid $descipt-color;
-}
 
-[id='valider'] {
-    background: $color-button;
-    color: $text-color;
-    padding: 15px 0;
-    width: 250px;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 30px;
-    border: none;
-}
 

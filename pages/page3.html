@@ -20,7 +20,7 @@
         <a href="../index.html"><img src="../images/wf.png" alt="Logo WhoFeed"></a>
         <h1>WHOFEED.GG</h1>
 
-        <ul>
+        <ul class="langage">
             <li>
                 <select id="langue" onchange="changeLanguage()">
                     <option value="fr">Français</option>
@@ -38,82 +38,70 @@
     <div class="content pagesearch brutprofil">
 
         <figure class="ficheprofil">
-            <figure class="ficheprofilgauche">
-                <h3>Profil</h3>
-                <ul>
-                    <li>KARMA+ KARMA-</li>
-                    <li>$Pseudo</li>
-                    <li>$Lien externe</li>
-                    <li>$Région</li>
-                    <li>$Dernier poste connu</li>
-                </ul>
-            </figure>
+            <div class="left">
+                <figure class="ficheprofilgauche">
+                    <h3>Profil</h3>
+                    <ul>
+                        <li>$Pseudo</li>
+                        <li>$Lien externe</li>
+                        <li>$Région</li>
+                        <li>$Dernier poste connu</li>
+                    </ul>
+                </figure>
 
-            <figure class="ficheprofilgauchebas">
-                <ul>
-                    <li>(Notation auto)</li>
-                    <li>(Notation auto)</li>
-                    <li>(Notation auto)</li>
-                    <li>(Notation auto)</li>
-                    <li>(Notation auto)</li>
-                    <li>(Notation auto)</li>
+                <figure class="ficheprofilgauchebas">
+                    <ul>
+                        <li>(Notation auto)</li>
+                        <li>(Notation auto)</li>
+                        <li>(Notation auto)</li>
+                        <li>(Notation auto)</li>
+                        <li>(Notation auto)</li>
+                        <li>(Notation auto)</li>
 
-                </ul>
-            </figure>
-
+                    </ul>
+                </figure>
+            </div>
             <figure class="ficheprofildroite" >
                 <!-- Badges -->
                 <h3>Badges</h3>
                 <p>Selectionnez un ou plusieurs badges puis valider</p>
-                <div class="badgetable">
-                    <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h4>Positif</h4>
-                            <select id="colonne1" size="15" multiple>
-                                <option value="option1">TEAM PLAYER</option>
-                                <option value="option2">BON SIGNAUX SONORES</option>
-                                <option value="option3">SAIS JOUER LE POSTE</option>
-                                <option value="option4">BON COÉQUIPIER</option>
-                                <option value="option5">POSTE GAP</option>
-                                <option value="option6">CHATTEUR AGRÉABLE</option>
-                                <option value="option7">LAISSE LES RESSOURCES</option>
-                                <option value="option8">RESPECT LE FORESTIER</option>
-                                <option value="option9">BON MENTAL</option>
-                                <option value="option10">N'ABANDONNE JAMAIS !</option>
-                                <option value="option11">BONNE ATTITUDE</option>
-                                <option value="option12">FAIT RAGEQUIT</option>
-                                <option value="option13">SAIS FARM</option>
-                                <option value="option14">GOOD OBJECTIVES</option>
-                                <option value="option15">FAISEUR DE VICTOIRE</option>
-
-                            </select>
-                            </td>
-                            
-                            <td>
-                                <h4>Négatif</h4>
-                            <select id="colonne2" size="15" multiple>
-                                <option value="option16">EGO PLAYER</option>
-                                <option value="option17">ABUS SIGNAUX SONORES</option>
-                                <option value="option18">SAIS PAS JOUER LE POSTE</option>
-                                <option value="option19">MAUVAIS COÉQUIPIER</option>
-                                <option value="option20">POSTE GAP</option>
-                                <option value="option21">CHATTEUR TOXIC</option>
-                                <option value="option22">VOL LES RESSOURCES</option>
-                                <option value="option23">DISRESPECT LE FORESTIER</option>
-                                <option value="option24">PAS DE MENTAL</option>
-                                <option value="option25">FF PLAYER</option>
-                                <option value="option26">TOXIC PLAYER</option>
-                                <option value="option27">RAGEQUIT</option>
-                                <option value="option28">SAIS PAS FARM</option>
-                                <option value="option29">AUCUNS OBJECTIFS</option>
-                                <option method="post" value="option30">RUINEUR DE PARTIES</option>
--->                           </select>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="badgelist">
+                    <h3>Négatif</h3>
+                    <ul id="listOne" class="badgesnegatif">
+                        <li class="badge-item" onclick="saveSelection('Badge 1')">EGO PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 2')">ABUS SIGNAUX SONORES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 3')">SAIS PAS JOUER LE POSTE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 4')">MAUVAIS COÉQUIPIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 5')">POSTE GAP</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 6')">CHATTEUR TOXIC</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 7')">VOL LES RESSOURCES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 8')">DISRESPECT LE FORESTIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 9')">PAS DE MENTAL</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 10')">FF PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 11')">TOXIC PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 12')">RAGEQUIT</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 13')">SAIS PAS FARM</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 14')">AUCUNS OBJECTIVES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 15')">RUINEUR DE PARTIES</li>
+                    </ul>
+                    <h3>Positif</h3>
+                    <ul id="listTwo" class="badgespositif">
+                        <li class="badge-item" onclick="saveSelection('Badge 16')">TEAM PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 17')">BON SIGNAUX SONORES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 18')">SAIS JOUER LE POSTE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 19')">BON COÉQUIPIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 20')">POSTE GAP</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 21')">CHATTEUR AGRÉABLE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 22')">LAISSE LES RESSOURCES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 23')">RESPECT LE FORESTIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 24')">BON MENTAL</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 25')">N'ABANDONNE JAMAIS !</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 26')">BONNE ATTITUDE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 27')">FAIT RAGEQUIT</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 28')">SAIS FARM</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 29')">GOOD OBJECTIFS</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 30')">FAISEUR DE VICTOIRE</li>
+                    </ul>
                 </div>
                 <div id="resultat"></div>
                 <!-- Badges END -->

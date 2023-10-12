@@ -308,6 +308,13 @@ footer {
 .ficheprofilgauche ul li, .ficheprofilgauchebas ul li {
   margin: 10px 0;
 }
+@media screen and (min-width: 1200px) {
+  .ficheprofilgauche, .ficheprofilgauchebas {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .ficheprofildroite {
   display: flex;
@@ -328,55 +335,42 @@ footer {
 .ficheprofildroite p {
   font-size: 20px;
 }
-
-.badgetable tr {
+.ficheprofildroite .badgelist {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  margin: 20px 0;
+  user-select: none;
 }
-.badgetable tr select {
-  border: none;
+.ficheprofildroite [id=listOne], .ficheprofildroite [id=listTwo] {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  cursor: pointer;
 }
-.badgetable tr h4 {
-  margin: 15px 0;
-  font-size: 24px;
+.ficheprofildroite [id=listOne] span, .ficheprofildroite [id=listTwo] span {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-@media screen and (min-width: 768px) {
-  .badgetable tr {
+@media screen and (min-width: 1200px) {
+  .ficheprofildroite [id=listOne], .ficheprofildroite [id=listTwo] {
     flex-direction: row;
   }
 }
-
-[id=colonne1] option {
-  background-color: rgb(53, 112, 53);
-  color: #FFFFFF;
-  padding: 7px 0;
-  width: 250px;
-  font-size: 18px;
-  text-align: center;
-  border: 1px solid #1E1E1E;
-}
-
-[id=colonne2] option {
-  background-color: rgb(191, 56, 56);
-  color: #FFFFFF;
-  padding: 7px 0;
-  width: 250px;
-  font-size: 18px;
-  text-align: center;
-  border: 1px solid #1E1E1E;
-}
-
-[id=valider] {
-  background: linear-gradient(to right, #F6861F, #ED1F24);
-  color: #FFFFFF;
-  padding: 15px 0;
-  width: 250px;
-  margin: 20px 0;
-  font-size: 18px;
-  text-align: center;
+.ficheprofildroite [id=listOne] li {
+  background-color: rgb(186, 45, 45);
+  padding: 15px 50px;
+  margin: 5px 0;
   border-radius: 30px;
-  border: none;
+  position: relative;
+}
+.ficheprofildroite [id=listTwo] li {
+  background-color: rgb(48, 157, 29);
+  padding: 15px 50px;
+  margin: 5px 0;
+  border-radius: 30px;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
