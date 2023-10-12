@@ -66,9 +66,8 @@
                 <h3>Badges</h3>
                 <p>Selectionnez un ou plusieurs badges puis valider</p>
                 <div class="badgelist">
-                    <h3>Négatif</h3>
                     <ul id="listOne" class="badgesnegatif">
-                        <li class="badge-item" onclick="saveSelection('Badge 1')">EGO PLAYER</li>
+                        <li class="badge-item" data-badge="Badge 1" onclick="saveSelection('Badge 1')">EGO PLAYER</li>
                         <li class="badge-item" onclick="saveSelection('Badge 2')">ABUS SIGNAUX SONORES</li>
                         <li class="badge-item" onclick="saveSelection('Badge 3')">SAIS PAS JOUER LE POSTE</li>
                         <li class="badge-item" onclick="saveSelection('Badge 4')">MAUVAIS COÉQUIPIER</li>
@@ -84,7 +83,6 @@
                         <li class="badge-item" onclick="saveSelection('Badge 14')">AUCUNS OBJECTIVES</li>
                         <li class="badge-item" onclick="saveSelection('Badge 15')">RUINEUR DE PARTIES</li>
                     </ul>
-                    <h3>Positif</h3>
                     <ul id="listTwo" class="badgespositif">
                         <li class="badge-item" onclick="saveSelection('Badge 16')">TEAM PLAYER</li>
                         <li class="badge-item" onclick="saveSelection('Badge 17')">BON SIGNAUX SONORES</li>
@@ -103,7 +101,6 @@
                         <li class="badge-item" onclick="saveSelection('Badge 30')">FAISEUR DE VICTOIRE</li>
                     </ul>
                 </div>
-                <div id="resultat"></div>
                 <!-- Badges END -->
             </figure>
 
