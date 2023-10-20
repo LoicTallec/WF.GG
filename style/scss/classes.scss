@@ -222,6 +222,8 @@
 
     @media screen and (min-width: 1200px) {
         flex-direction: row;
+        max-width: 1250px;
+        margin: auto;
     }
 }
 
@@ -267,8 +269,7 @@
     padding: 20px;
     text-align: center;
     margin: auto;
-    max-width: fit-content;
-    
+    width: fit-content;
     h3 {
         font-size: 30px;
     }
@@ -299,12 +300,8 @@
             position: absolute; 
             right: 20px;
             top: 50%; 
-            transform: translateY(-50%); 
-        }
-    
-        @media screen and (min-width: 1200px) {
-            
-            
+            transform: translateY(-50%);
+            font-weight: bold; 
         }
     }
     
@@ -326,6 +323,11 @@
             border-radius: 30px;
             position: relative;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 800px;
+            
     }
 }
 

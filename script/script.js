@@ -1,85 +1,64 @@
 "use strict";
 
-
-function searchProfile() {
-    // Redirige vers la deuxième page
-    window.location.href = "pages/page1.html";
+// Définition de la fonction saveSelection avec la logique d'envoi des données du badge au serveur
+function saveSelection(badgeText, clickCount) {
+  // Envoi du nombre de clics à l'endpoint approprié via une requête Ajax
+  const data = JSON.stringify({ badge: badgeText, count: clickCount });
+  $.ajax({
+    url: 'url_de_votre_endpoint',
+    type: 'POST',
+    data: data,
+    contentType: 'application/json',
+    success: function(response) {
+      console.log('Nombre de clics enregistré avec succès');
+    },
+    error: function(error) {
+      console.error('Erreur lors de l\'enregistrement du nombre de clics');
+    }
+  });
 }
 
-function creatProfil() {
-  // Redirige vers la deuxième page
-  window.location.href = "page2.html";
-}
+// Sélectionnez tous les éléments <li> avec la classe "badge-item"
+const badgeItems = document.querySelectorAll('.badge-item');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const badgeItems = document.querySelectorAll('.badge-item');
-
-  badgeItems.forEach((item) => {
-    const badgeText = item.textContent;
-    let clickCounter = getCookie(badgeText) || localStorage.getItem(badgeText) || 0;
-
-    const counterSpan = document.createElement('span');
-    counterSpan.classList.add('counter');
-    counterSpan.textContent = clickCounter.toString();
-    item.appendChild(counterSpan);
-
-    item.addEventListener('click', () => {
-      if (!item.classList.contains('disabled')) {
-        clickCounter++;
-        counterSpan.textContent = clickCounter.toString();
-        item.classList.add('disabled');
-        saveSelection(item.textContent, clickCounter);
-        setCookie(item.textContent, clickCounter, 365); // Stocke la valeur du compteur dans un cookie pour une durée d'un an (365 jours)
-        localStorage.setItem(badgeText, clickCounter); // Enregistre la valeur du compteur dans le stockage local
-        setTimeout(() => {
-          item.classList.remove('disabled');
-        }, 10000);
-      }
-    });
+// Parcourir tous les éléments <li> et ajouter un gestionnaire d'événements de clic
+badgeItems.forEach(badgeItem => {
+  // Créer une balise <span> pour le compteur de clics
+  const counterSpan = document.createElement('span');
+  const badgeText = badgeItem.textContent;
+  let clickCount = 0;
+  counterSpan.textContent = clickCount.toString();
+  
+  // Ajouter la balise <span> à la fin de chaque élément <li>
+  badgeItem.appendChild(counterSpan);
+  
+  // Ajouter un attribut data-last-clicked pour stocker le dernier horodatage de clic
+  badgeItem.dataset.lastClicked = '0';
+  
+  // Ajouter un gestionnaire d'événements de clic à chaque élément <li>
+  badgeItem.addEventListener('click', () => {
+    const currentTime = new Date().getTime();
+    const lastClickedTime = parseInt(badgeItem.dataset.lastClicked);
+    
+    // Vérifier si le badge peut être cliqué (limite d'un clic toutes les 2 secondes)
+    if (currentTime - lastClickedTime < 2000) {
+      return; // Ne rien faire si le badge a été cliqué récemment
+    }
+    
+    // Mettre à jour le compteur de clics
+    clickCount++;
+    counterSpan.textContent = clickCount.toString();
+    
+    // Mettre à jour le dernier horodatage de clic
+    badgeItem.dataset.lastClicked = currentTime.toString();
+    
+    // Appeler la fonction saveSelection avec le texte du badge et le nombre de clics
+    saveSelection(badgeText, clickCount);
   });
 });
 
-function setCookie(name, value, days) {
-  const expires = new Date();
-  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-  const cookie = `${name}=${encodeURIComponent(value)};expires=${expires.toUTCString()};path=/;SameSite=None;Secure`;
-  document.cookie = cookie;
-}
 
-function getCookie(name) {
-  const cookieName = `${name}=`;
-  const cookieArray = document.cookie.split(';');
 
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookie = cookieArray[i];
-    while (cookie.charAt(0) === ' ') {
-      cookie = cookie.substring(1);
-    }
-    if (cookie.indexOf(cookieName) === 0) {
-      return decodeURIComponent(cookie.substring(cookieName.length, cookie.length));
-    }
-  }
-  return null;
-}
 
-function saveSelection(badgeText, clickCount) {
-  // Votre code pour enregistrer la sélection du badge et le compteur de clics ici
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'url_de_votre_endpoint', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      console.log('Badge enregistré avec succès');
-    }
-  };
-  const data = JSON.stringify({ badge: badgeText, count: clickCount });
-  xhr.send(data);
-  // Enregistrement dans le stockage local du navigateur
-  localStorage.setItem('badge', badgeText);
-  localStorage.setItem('clickCount', clickCount);
-}
 
-// Récupération des valeurs du stockage local du navigateur
-const savedBadge = localStorage.getItem('badge');
-const savedClickCount = localStorage.getItem('clickCount');
 

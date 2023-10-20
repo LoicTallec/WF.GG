@@ -42,7 +42,7 @@ header {
 }
 header select {
   padding: 0 10px;
-  margin-right: 20px;
+  margin-left: 110px;
   color: #FFFFFF;
   font-size: 20px;
   background-color: #494949;
@@ -284,6 +284,8 @@ footer {
 @media screen and (min-width: 1200px) {
   .ficheprofil {
     flex-direction: row;
+    max-width: 1250px;
+    margin: auto;
   }
 }
 
@@ -327,7 +329,7 @@ footer {
   padding: 20px;
   text-align: center;
   margin: auto;
-  max-width: fit-content;
+  width: fit-content;
 }
 .ficheprofildroite h3 {
   font-size: 30px;
@@ -357,6 +359,7 @@ footer {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  font-weight: bold;
 }
 .ficheprofildroite [id=listOne] li {
   background-color: rgb(186, 45, 45);
@@ -371,6 +374,11 @@ footer {
   margin: 2px 0;
   border-radius: 30px;
   position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .ficheprofildroite {
+    min-width: 800px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

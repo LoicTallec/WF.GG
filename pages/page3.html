@@ -10,7 +10,7 @@
     <link rel="icon" href="images/gg.png">
     <link rel="stylesheet" href="../style/css/style.css">
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>WhoFeed.gg</title>
 </head>
@@ -27,9 +27,6 @@
                     <option value="en">English</option>
                     <option value="es">Spanish</option>
                 </select>
-            </li>
-            <li>
-                <a href="#">Connexion</a>
             </li>
         </ul>
 
@@ -48,61 +45,40 @@
                         <li>$Dernier poste connu</li>
                     </ul>
                 </figure>
-
-                <figure class="ficheprofilgauchebas">
-                    <ul>
-                        <li>(Notation auto)</li>
-                        <li>(Notation auto)</li>
-                        <li>(Notation auto)</li>
-                        <li>(Notation auto)</li>
-                        <li>(Notation auto)</li>
-                        <li>(Notation auto)</li>
-
-                    </ul>
-                </figure>
             </div>
             <figure class="ficheprofildroite" >
                 <!-- Badges -->
                 <h3>Badges</h3>
-                <p>Selectionnez un ou plusieurs badges puis valider</p>
+                <p>Les badges rouge sont négatif, les vert sont prositif, soyez objectif !</p>
                 <div class="badgelist">
-                    <ul id="listOne" class="badgesnegatif">
-                        <li class="badge-item" data-badge="Badge 1" onclick="saveSelection('Badge 1')">EGO PLAYER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 2')">ABUS SIGNAUX SONORES</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 3')">SAIS PAS JOUER LE POSTE</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 4')">MAUVAIS COÉQUIPIER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 5')">POSTE GAP</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 6')">CHATTEUR TOXIC</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 7')">VOL LES RESSOURCES</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 8')">DISRESPECT LE FORESTIER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 9')">PAS DE MENTAL</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 10')">FF PLAYER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 11')">TOXIC PLAYER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 12')">RAGEQUIT</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 13')">SAIS PAS FARM</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 14')">AUCUNS OBJECTIVES</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 15')">RUINEUR DE PARTIES</li>
+                    <ul id="listOne">
+                        <li class="badge-item" onclick="saveSelection('Badge 1')">RUINEUR DE PARTIES/TROLL</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 2')">EGO PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 3')">ABUS SIGNAUX/TOXIC PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 4')">POSTE GAP</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 5')">VOL LES RESSOURCES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 6')">DISRESPECT LE FORESTIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 7')">PAS DE MENTAL/FF PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 8')">RAGEQUIT/NOUVEAU COMPTE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 9')">BLAME LES AUTRES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 10')">MÉRITE SON BAN</li>
                     </ul>
-                    <ul id="listTwo" class="badgespositif">
-                        <li class="badge-item" onclick="saveSelection('Badge 16')">TEAM PLAYER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 17')">BON SIGNAUX SONORES</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 18')">SAIS JOUER LE POSTE</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 19')">BON COÉQUIPIER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 20')">POSTE GAP</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 21')">CHATTEUR AGRÉABLE</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 22')">LAISSE LES RESSOURCES</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 23')">RESPECT LE FORESTIER</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 24')">BON MENTAL</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 25')">N'ABANDONNE JAMAIS !</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 26')">BONNE ATTITUDE</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 27')">FAIT RAGEQUIT</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 28')">SAIS FARM</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 29')">GOOD OBJECTIFS</li>
-                        <li class="badge-item" onclick="saveSelection('Badge 30')">FAISEUR DE VICTOIRE</li>
+                    <ul id="listTwo">
+                        <li class="badge-item" onclick="saveSelection('Badge 11')">TEAM PLAYER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 12')">BON SIGNAUX</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 13')">BON COÉQUIPIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 14')">POSTE GAP</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 15')">LAISSE LES RESSOURCES</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 16')">RESPECT LE FORESTIER</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 17')">N'ABANDONNE JAMAIS !</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 18')">FAIT RAGEQUIT</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 19')">NE BLAME PERSONNE</li>
+                        <li class="badge-item" onclick="saveSelection('Badge 20')">FAISEUR DE VICTOIRE</li>
                     </ul>
                 </div>
                 <!-- Badges END -->
             </figure>
+            
 
     </div>
 
