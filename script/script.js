@@ -10,18 +10,18 @@ const listOne = [
   {
     "id": "2",
     "texte": "EGO PLAYER",
-    "LVL1" : "/MUTE ALL",
-    "LVL2" : "0/0/0 200 20MIN",
-    "LVL3" : "REP MY TEAM",
-    "LVL4" : "KDA.EXE + REP MY TEAM",
+    "LVL1" : "1 - /MUTE ALL",
+    "LVL2" : "1 - 0/0/0 200 20MIN",
+    "LVL3" : "1 - ''REP MY TEAM'' ",
+    "LVL4" : "1 - KDA.EXE + ''REP MY TEAM''",
   },
   {
     "id": "3",
     "texte": "ABUS SIGNAUX/TOXIC PLAYER",
-    "LVL1" : "CANCER AUDITIF PHASE 1",
-    "LVL2" : "CANCER AUDITIF PHASE 2",
-    "LVL3" : "CANCER AUDITIF PHASE 3",
-    "LVL4" : "CANCER AUDITIF PHASE TERMINAL",
+    "LVL1" : "2 - IRRITANT / CANCER AUDITIF PHASE 2",
+    "LVL2" : "2 - TOXIC / CANCER AUDITIF PHASE 3",
+    "LVL3" : "2 - CORROSIF / CANCER GENERALISÉ PHASE TERMINAL",
+    "LVL4" : "2 - MERDE HUMAINE / CANCER VIVANT ",
   },
   {
     "id": "4",
@@ -38,10 +38,10 @@ const listOne = [
   {
     "id": "7",
     "texte": "PAS DE MENTAL/FF PLAYER",
-    "LVL1" : "HUMEUR CHANGEANTE",
-    "LVL2" : "MENTALEMENT FRAGILE",
-    "LVL3" : "A FLEUR DE PEAU",
-    "LVL4" : "'FF' CHAT 3MIN" 
+    "LVL1" : "3 - HUMEUR CHANGEANTE",
+    "LVL2" : "3 - MENTALEMENT FRAGILE",
+    "LVL3" : "3 - A FLEUR DE PEAU",
+    "LVL4" : "3 - ''FF'' CHAT 3MIN" 
   },
   {
     "id": "8",
@@ -154,18 +154,18 @@ function displayBadgesOne() {
         sendClickRequest(badge.texte, clickCount);
         span.textContent = clickCount;
 
-        if (clickCount > 5 && badge.LVL1) {
+        if (clickCount > 100 && badge.LVL1) {
           noteAuto.appendChild(auto);
 
-          if (clickCount > 10 && badge.LVL2) {
+          if (clickCount > 500 && badge.LVL2) {
             noteAuto.removeChild(auto);
             noteAuto.appendChild(autoTwo);
 
-            if (clickCount > 15 && badge.LVL3) {
+            if (clickCount > 1000 && badge.LVL3) {
               noteAuto.removeChild(autoTwo);
               noteAuto.appendChild(autoTree);
 
-              if (clickCount > 20 && badge.LVL4) {
+              if (clickCount > 1600 && badge.LVL4) {
                 noteAuto.removeChild(autoTree);
                 noteAuto.appendChild(autoFour);
               }
@@ -176,7 +176,7 @@ function displayBadgesOne() {
         isLocked = true; // Verrouiller le clic
         setTimeout(() => {
           isLocked = false; // Déverrouiller le clic après 5 secondes
-        }, 50);
+        }, 1500000);
       }
     });
   });

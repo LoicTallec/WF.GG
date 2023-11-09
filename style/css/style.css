@@ -289,6 +289,20 @@ footer {
   }
 }
 
+[id=list-auto] {
+  display: flex;
+  flex-direction: column;
+}
+[id=list-auto] li {
+  background-color: rgb(143, 0, 0);
+  padding: 10px;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
 .ficheprofilgauche, .ficheprofilgauchebas {
   justify-content: center;
   border: #fff solid 2px;

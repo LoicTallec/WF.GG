@@ -227,6 +227,23 @@
     }
 }
 
+
+    [id="list-auto"] {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            background-color: rgb(143, 0, 0);
+            padding: 10px;
+            color: #fff;
+            font-weight: 900;
+            border-radius: 5px;
+            letter-spacing: .5px;
+            position: relative;
+        }
+    }
+
+
 .ficheprofilgauche, .ficheprofilgauchebas {
 
     justify-content: center;
@@ -249,8 +266,11 @@
 
         li {
             margin: 10px 0;
+            
         }
     }
+
+
     @media screen and (min-width: 1200px) {
         min-width: 400px;
         display: flex;
