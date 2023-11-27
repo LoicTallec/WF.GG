@@ -22,9 +22,8 @@
         <ul>
             <li>
                 <select id="langue" onchange="changeLanguage()">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
+                    <option id="fr" value="fr">Français</option>
+                    <option id="en" value="en">English</option>
                 </select>
             </li>
         </ul>
@@ -47,7 +46,8 @@
                         noter en bien ou en mal les performances de vos alliés/adversaires.
                     </li>
                     <li>
-                        Des badges seront à votre disposition  pour noter simplement le bon comportement d'un joueur.
+                        Des badges seront à votre disposition, ils sont cliquables et augmentes de 1 
+                        par clic, et d'un maximum d'une fois toute les 25 minutes. La notation auto est la première itération du rank WF (plus a suivre).
                     </li>
                 </ul>
 
@@ -75,6 +75,8 @@
                     <option value="EUW">EUW</option>
                     <option value="EUNE">EUN/E</option>
                     <option value="NA">NA</option>
+                    <option value="KR">KR</option>
+                    <option value="CH">CH</option>
                 <input type="text" id="pseudo" placeholder="Pseudo">
                 <!-- Ajoutez d'autres options géographiques selon vos besoins -->
                 </select>

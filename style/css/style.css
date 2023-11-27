@@ -111,7 +111,7 @@ footer {
 
 .description {
   width: 100%;
-  background-color: q #1E1E1E;
+  background-color: #1E1E1E;
   padding: 20px 40px;
 }
 .description .des-center {
@@ -289,11 +289,42 @@ footer {
   }
 }
 
-[id=list-auto] {
-  display: flex;
-  flex-direction: column;
+.ego-one,
+.ego-two,
+.ego-three,
+.ego-four {
+  display: none;
+  justify-content: center;
+  background-color: rgb(143, 0, 0);
+  padding: 10px;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  position: relative;
 }
-[id=list-auto] li {
+
+.abuse-one,
+.abuse-two,
+.abuse-three,
+.abuse-four {
+  display: none;
+  justify-content: center;
+  background-color: rgb(143, 0, 0);
+  padding: 10px;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.mental-one,
+.mental-two,
+.mental-three,
+.mental-four {
+  display: none;
+  justify-content: center;
   background-color: rgb(143, 0, 0);
   padding: 10px;
   color: #fff;
@@ -349,7 +380,7 @@ footer {
   font-size: 30px;
 }
 .ficheprofildroite p {
-  font-size: 20px;
+  padding: 0 20px;
 }
 .ficheprofildroite .badgelist {
   display: flex;
@@ -362,27 +393,27 @@ footer {
     flex-direction: row;
   }
 }
-.ficheprofildroite [id=listOne], .ficheprofildroite [id=listTwo] {
+.ficheprofildroite [id=positive], .ficheprofildroite [id=negative] {
   display: flex;
   flex-direction: column;
   margin: 0 30px;
   cursor: pointer;
 }
-.ficheprofildroite [id=listOne] span, .ficheprofildroite [id=listTwo] span {
+.ficheprofildroite [id=positive] span, .ficheprofildroite [id=negative] span {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   font-weight: bold;
 }
-.ficheprofildroite [id=listOne] li {
+.ficheprofildroite [id=negative] li {
   background-color: rgb(186, 45, 45);
   padding: 10px 50px;
   margin: 2px 0;
   border-radius: 30px;
   position: relative;
 }
-.ficheprofildroite [id=listTwo] li {
+.ficheprofildroite [id=positive] li {
   background-color: rgb(48, 157, 29);
   padding: 10px 50px;
   margin: 2px 0;

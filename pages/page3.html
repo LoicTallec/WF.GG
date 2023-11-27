@@ -22,10 +22,9 @@
 
         <ul class="langage">
             <li>
-                <select id="langue" onchange="changeLanguage()">
-                    <option value="fr">Français</option>
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
+                <select id="langue">
+                    <option id="fr" value="fr">Français</option>
+                    <option id="en" value="en">English</option>
                 </select>
             </li>
         </ul>
@@ -47,22 +46,51 @@
                 </figure>
                 <figure class="ficheprofilgauchebas">
                     <h3>Notation auto</h3>
-                    <p>Badge auto selon nombre de cliques sur : 1 - EGO / 2 - ABUSE SIGNAUX et 3 - PAS DE MENTAL</p>
+                    <p>Badges auto selon le nombre de cliques sur : 1 - EGO / 2 - ABUSE SIGNAUX et 3 - PAS DE MENTAL</p>
                     <ul id="list-auto">
-                        
+                        <li class="ego-one">1 - (LVL 1) /MUTE ALL</li>
+                        <li class="ego-two">1 - (LVL 2) 0/0/0 200 20MIN</li>
+                        <li class="ego-three">1 - (LVL 3)"REP MY TEAM"</li>
+                        <li class="ego-four">1 - (LVL MAX) KDA.EXE + "REP MY TEAM"</li>
+
+                        <li class="abuse-one">2 - (LVL 1) HORRIBLE / CANCER AUDITIF PHASE 2</li>
+                        <li class="abuse-two">2 - (LVL 2) TOXIC / CANCER AUDITIF PHASE 3</li>
+                        <li class="abuse-three">2 - (LVL 3) CORROSIF / CANCER GENERALISÉ PHASE TERMINAL</li>
+                        <li class="abuse-four">2 - (LVL MAX) MERDE HUMAINE / CANCER SUR PATTES / RADIOACTIF</li>
+
+                        <li class="mental-one">3 - (LVL 1) HUMEUR CHANGEANTE</li>
+                        <li class="mental-two">3 - (LVL 2) MENTALEMENT FRAGILE</li>
+                        <li class="mental-three">3 - (LVL 3) A FLEUR DE PEAU</li>
+                        <li class="mental-four">3 - (LVL MAX) "15" CHAT 3MIN</li>
                     </ul>
                 </figure>
             </div>
             <figure class="ficheprofildroite" >
                 <!-- Badges -->
                 <h3>Badges</h3>
-                <p>Les badges rouge sont négatif, les vert sont prositif, soyez objectif !</p>
+                <p>Les badges rouge sont négatif, les vert sont prositif, soyez objectif ! (1 clic toute les 25 minutes)</p>
                 <div class="badgelist">
-                    <ul id="listOne">
-                        
+                    <ul id="negative">
+                        <li id="1">RUINEUR DE PARTIES / TROLL <span id="19"></span></li>
+                        <li id="2">ABUS SIGNAUX/TOXIC PLAYER <span id="20"></span></li>
+                        <li id="3">PAS DE MENTAL / FF PLAYER <span id="21"></span></li>
+                        <li id="4">EGO PLAYER <span id="22"></span></li>
+                        <li id="5">POSTE GAP <span id="23"></span></li>
+                        <li id="6">VOL LES RESSOURCES <span id="24"></span></li>
+                        <li id="7">DISRESPECTE LE FORESTIER <span id="25"></span></li>
+                        <li id="8">RAGEQUIT / NOUVEAU COMPTE <span id="26"></span></li>
+                        <li id="9">BLAME SES ALLIÉS <span id="27"></span></li>
                     </ul>
-                    <ul id="listTwo">
-                        
+                    <ul id="positive">
+                        <li id="10">FAISEUR DE VICTOIRE <span id="28"></span></li>
+                        <li id="11">BON SIGNAUX <span id="29"></span></li>
+                        <li id="12">MENTAL D'ACIER <span id="30"></span></li>
+                        <li id="13">TEAM PLAYER <span id="31"></span></li>
+                        <li id="14">POSTE GAP <span id="32"></span></li>
+                        <li id="15">LAISSE LES RESSOURCES <span id="33"></span></li>
+                        <li id="16">RESPECT LE FORESTIER <span id="34"></span></li>
+                        <li id="17">FAIT RAGEQUIT <span id="35"></span></li>
+                        <li id="18">NE BLAME PERSONNE <span id="36"></span></li>
                     </ul>
                 </div>
                 <!-- Badges END -->

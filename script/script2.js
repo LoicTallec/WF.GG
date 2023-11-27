@@ -93,3 +93,136 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+const listOne = [
+  {
+    "id": "1",
+    "texte-french": "RUINEUR DE PARTIES / TROLL",
+    "texte-english": "TROLL PLAYER / RUIN GAMES"
+  },
+  {
+    "id": "2",
+    "texte-french": "EGO PLAYER",
+    "texte-english": "EGO PLAYER",
+    "LVL1-french" : "1 - /MUTE ALL",
+    "LVL2-french" : "1 - 0/0/0 200 20MIN",
+    "LVL3-french" : "1 - ''REP MY TEAM'' ",
+    "LVL4-french" : "1 - KDA.EXE + ''REP MY TEAM''",
+
+    "LVL1-english" : "1 - /MUTE ALL",
+    "LVL2-english" : "1 - 0/0/0 200 20MIN",
+    "LVL3-english" : "1 - ''REP MY TEAM'' ",
+    "LVL4-english" : "1 - KDA.EXE + ''REP MY TEAM''"
+  },
+  {
+    "id": "3",
+    "texte-french": "ABUS SIGNAUX/TOXIC PLAYER",
+    "texte-english": "ABUSE SIGNAL / TOXIC",
+    "LVL1-french" : "2 - HORRIBLE / CANCER AUDITIF PHASE 2",
+    "LVL2-french" : "2 - TOXIC / CANCER AUDITIF PHASE 3",
+    "LVL3-french" : "2 - CORROSIF / CANCER GENERALISÉ PHASE TERMINAL",
+    "LVL4-french" : "2 - MERDE HUMAINE / CANCER VIVANT ",
+
+    "LVL1-english" : "2 - HORRIBLE / HEARING CANCER STAGE 2",
+    "LVL2-english" : "2 - TOXIC / HEARING CANCER STAGE 3",
+    "LVL3-english" : "2 - CORROSIVE PLAYER / GENERALISED CANCER TERMINAL PHASE",
+    "LVL4-english" : "2 - HUMAN SHIT / CANCER ON PAWS / RADIOACTIVE "
+  },
+  {
+    "id": "4",
+    "texte-french": "POSTE GAP",
+    "texte-english": "POST GAP"
+  },
+  {
+    "id": "5",
+    "texte-french": "VOL LES RESSOURCES", 
+    "texte-english": "RESOURCES THIEF"
+  },
+  {
+    "id": "6",
+    "texte-french": "DISRESPECTE LE FORESTIER",
+    "texte-english": "DISRESPECT  FOREST"
+  },
+  {
+    "id": "7",
+    "texte-french": "PAS DE MENTAL / FF PLAYER",
+    "texte-english": "NO MENTAL / FF PLAYER",
+    "LVL1-french" : "3 - HUMEUR CHANGEANTE",
+    "LVL2-french" : "3 - MENTALEMENT FRAGILE",
+    "LVL3-french" : "3 - A FLEUR DE PEAU",
+    "LVL4-french" : "3 - ''15'' CHAT 3MIN",
+
+    "LVL1-english" : "3 - CHANGING MOOD",
+    "LVL2-english" : "3 - MENTALLY WEAK",
+    "LVL3-english" : "3 - WEAK-MINDED",
+    "LVL4-english" : "3 - ''15'' CHAT 3MIN"
+  },
+  {
+    "id": "8",
+    "texte-french": "RAGEQUIT / NOUVEAU COMPTE",
+    "texte-english": "RAGEQUIT / NEW ACC"
+  },
+  {
+    "id": "9",
+    "texte-french": "BLAME SES ALLIÉS",
+    "texte-english": "BLAME ALLIES"
+  },
+  {
+    "id": "10",
+    "texte-french": "MÉRITE SON BAN",
+    "texte-english": "DESERVES A BAN"
+  }
+];
+
+const listTwo = [
+  {
+    "id": "11",
+    "texte-french": "TEAM PLAYER",
+    "texte-english": "TEAM PLAYER"
+  },
+  {
+    "id": "12",
+    "texte-french": "BON SIGNAUX",
+    "texte-english": "GOOD SIGNALS"
+  },
+  {
+    "id": "13",
+    "texte-french": "BON COÉQUIPIER",
+    "texte-english": "GOOD DUO"
+  },
+  {
+    "id": "14",
+    "texte-french": "POSTE GAP",
+    "texte-english": "POST GAP"
+  },
+  {
+    "id": "15",
+    "texte-french": "LAISSE LES RESSOURCES",
+    "texte-english": "LEAVE RESOURCES"
+  },
+  {
+    "id": "16",
+    "texte-french": "RESPECT LE FORESTIER",
+    "texte-english": "RESPECT FOREST"
+  },
+  {
+    "id": "17",
+    "texte-french": "N'ABANDONNE JAMAIS !",
+    "texte-english": "NEVER FF"
+  },
+  {
+    "id": "18",
+    "texte-french": "FAIT RAGEQUIT",
+    "texte-english": "MAKE RAGEQUIT"
+  },
+  {
+    "id": "19",
+    "texte-french": "NE BLAME PERSONNE",
+    "texte-english": "NEVER BLAME"
+  },
+  {
+    "id": "20",
+    "texte-french": "FAISEUR DE VICTOIRE",
+    "texte-english": "WINNER MAKER"
+  }
+]

@@ -12,7 +12,7 @@
 
 .description {
     width: 100%;
-    background-color:q $descipt-color;
+    background-color: $descipt-color;
     padding: 20px 40px;
     
     .des-center {
@@ -228,20 +228,50 @@
 }
 
 
-    [id="list-auto"] {
-        display: flex;
-        flex-direction: column;
+.ego-one,
+.ego-two,
+.ego-three,
+.ego-four {
+    display: none;
+    justify-content: center;
+    background-color: rgb(143, 0, 0);
+    padding: 10px;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+    letter-spacing: .5px;
+    position: relative;
+}
 
-        li {
-            background-color: rgb(143, 0, 0);
-            padding: 10px;
-            color: #fff;
-            font-weight: 900;
-            border-radius: 5px;
-            letter-spacing: .5px;
-            position: relative;
-        }
-    }
+.abuse-one,
+.abuse-two,
+.abuse-three,
+.abuse-four {
+    display: none;
+    justify-content: center;
+    background-color: rgb(143, 0, 0);
+    padding: 10px;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+    letter-spacing: .5px;
+    position: relative;
+}
+
+.mental-one,
+.mental-two,
+.mental-three,
+.mental-four {
+    display: none;
+    justify-content: center;
+    background-color: rgb(143, 0, 0);
+    padding: 10px;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+    letter-spacing: .5px;
+    position: relative;
+}
 
 
 .ficheprofilgauche, .ficheprofilgauchebas {
@@ -295,8 +325,7 @@
     }
 
     p {
-        font-size: 20px;
-        
+        padding : 0 20px;
     }
 
     .badgelist {
@@ -310,7 +339,7 @@
         }
     }
     
-    [id='listOne'], [id='listTwo'] {
+    [id='positive'], [id='negative'] {
         display: flex;
         flex-direction: column;
         margin: 0 30px;
@@ -325,7 +354,7 @@
         }
     }
     
-    [id='listOne'] {
+    [id='negative'] {
         li {
             background-color: rgb(186, 45, 45);
             padding: 10px 50px;
@@ -335,7 +364,7 @@
         }
     }
     
-    [id='listTwo'] {
+    [id='positive'] {
         li {
             background-color: rgb(48, 157, 29);
             padding: 10px 50px;
